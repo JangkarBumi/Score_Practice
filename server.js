@@ -9,7 +9,6 @@ const nodemailer = require('nodemailer');
 app.use(express.json());
 require('dotenv').config();
 
-app.get('/', (req, res) => res.send('API Running'));
 
 app.post('/send', (req, res) => {
   let mailTransporter = nodemailer.createTransport({
