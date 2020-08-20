@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 
 const Contact = () => {
@@ -14,7 +15,14 @@ const Contact = () => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    console.log(subject, content);
+    axios({
+      method: 'post',
+      url: '/send',
+      data: {
+        subject,
+        content,
+      },
+    });
   };
 
   return (
