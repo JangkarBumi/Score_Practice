@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/JangkarBumi/Score_Practice#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.11"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
