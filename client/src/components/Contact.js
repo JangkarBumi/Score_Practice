@@ -15,14 +15,20 @@ const Contact = () => {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    axios({
-      method: 'post',
-      url: '/send',
-      data: {
-        subject,
-        content,
-      },
-    });
+    try {
+      axios({
+        method: 'post',
+        url: '/send',
+        data: {
+          subject,
+          content,
+        },
+      });
+      alert('Email sent successfully!')
+    } catch (error) {
+      alert(`Email failed,${error} `)
+    }
+
   };
 
   return (
